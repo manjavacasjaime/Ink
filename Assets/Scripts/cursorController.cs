@@ -44,6 +44,9 @@ public class cursorController : MonoBehaviour
         {
             rend.material.SetColor("_Color", Color.black);
             groupSinglePixels();
+        } else if (Input.GetMouseButton(1) && lastPaintedPixelPos != mousePos)
+        {
+            deletePixelInPosition(mousePos);
         }
 
         if (Input.GetKey(KeyCode.Escape) && arrPixels.Count > 0)
@@ -137,5 +140,19 @@ public class cursorController : MonoBehaviour
         if (obj2Index <= obj1Index + 15) return false;
 
         return Vector2.Distance(obj1.transform.position, obj2.transform.position) <= obj1.GetComponent<SpriteRenderer>().bounds.size.x;
+    }
+
+    void deletePixelInPosition(Vector3 pos)
+    {
+        GameObject[] pixels = GameObject.FindGameObjectsWithTag("BlackPixel");
+
+        foreach (GameObject pixel in pixels)
+        {
+            if (Vector2.Distance(pixel.transform.position, pos) <= pixel.GetComponent<SpriteRenderer>().bounds.size.x)
+            {
+                Destroy(pixel);
+                break;
+            }
+        }
     }
 }
