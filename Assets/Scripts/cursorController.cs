@@ -37,12 +37,10 @@ public class cursorController : MonoBehaviour
         transform.position = mousePos;
 
         if (Input.GetMouseButton(0) && lastPaintedPixelPos != mousePos)
-        {
-            rend.material.SetColor("_Color", Color.grey);
+        {  
             paintNewPixel();
         } else if (!Input.GetKey(KeyCode.Mouse0) && pixelPainted)
         {
-            rend.material.SetColor("_Color", Color.black);
             groupSinglePixels();
         } else if (Input.GetMouseButton(1) && lastPaintedPixelPos != mousePos)
         {
@@ -51,13 +49,15 @@ public class cursorController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Escape) && arrPixels.Count > 0)
         {
-            rend.material.SetColor("_Color", Color.black);
             cancelActualDrawing();
         }
     }
 
     void paintNewPixel()
     {
+        if (inkBarController.currentInk == 0) return;
+        rend.material.SetColor("_Color", Color.grey);
+
         GameObject instantiatedPixel = Instantiate(pixelPrefab);
         instantiatedPixel.name = "blackPixel " + i.ToString();
         i++;
@@ -81,6 +81,9 @@ public class cursorController : MonoBehaviour
         {
             changeActualDrawingPixelsColor(Color.grey);
         }
+
+        inkBarController.currentInk--;
+        if (inkBarController.currentInk < 0) inkBarController.currentInk = 0;
     }
 
     void groupSinglePixels()
@@ -92,8 +95,9 @@ public class cursorController : MonoBehaviour
         firstPixel = null;
         lastPixel = null;
         if (arrPixels.Count == 0) return;
+        rend.material.SetColor("_Color", Color.black);
+        
         //all the pixels from arrPixels are painted to black
-
         GameObject drawing = new GameObject("drawing " + j);
         j++;
 
@@ -118,10 +122,14 @@ public class cursorController : MonoBehaviour
         pixelPainted = false;
         firstPixel = null;
         lastPixel = null;
+        rend.material.SetColor("_Color", Color.black);
+
         foreach (GameObject obj in arrPixels)
         {
             Destroy(obj);
         }
+
+        inkBarController.currentInk += arrPixels.Count;
         arrPixels.Clear();
     }
 
@@ -151,6 +159,8 @@ public class cursorController : MonoBehaviour
             if (Vector2.Distance(pixel.transform.position, pos) <= pixel.GetComponent<SpriteRenderer>().bounds.size.x)
             {
                 Destroy(pixel);
+                inkBarController.currentInk++;
+                if (inkBarController.currentInk > inkBarController.maxInk) inkBarController.currentInk = inkBarController.maxInk;
                 break;
             }
         }

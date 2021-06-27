@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\blackPixelController.cs" />
     <Compile Include="Assets\Scripts\cameraController.cs" />
     <Compile Include="Assets\Scripts\cursorController.cs" />
+    <Compile Include="Assets\Scripts\inkBarController.cs" />
     <Compile Include="Assets\Scripts\playerController.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/jaime/Documents/code/unity/Ink/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

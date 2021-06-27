@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 62
+  controlID: 16
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 63
+  controlID: 17
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 64
+  controlID: 18
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 13344
+  m_LastSelectedObjectID: 13292
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -433,19 +433,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animations
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Animations
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jaime\Documents\code\unity\Ink
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: aa340000
-    m_LastClickedID: 13482
+    m_SelectedIDs: b2340000
+    m_LastClickedID: 13490
     m_ExpandedIDs: 000000009e340000a034000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -501,7 +501,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000052360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -518,7 +518,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 3}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -597,8 +597,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 20340000
-      m_LastClickedID: 13344
+      m_SelectedIDs: ec330000
+      m_LastClickedID: 13292
       m_ExpandedIDs: 6efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -659,9 +659,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.077241, y: 1.8135976, z: -160.6653}
+    m_Target: {x: 0.4240895, y: -0.0036897622, z: -363.60928}
     speed: 2
-    m_Value: {x: -9.077241, y: 1.8135976, z: -160.6653}
+    m_Value: {x: 0.4240895, y: -0.0036897622, z: -363.60928}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -711,9 +711,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 24.211489
+    m_Target: 15.322541
     speed: 2
-    m_Value: 24.211489
+    m_Value: 15.322541
   m_Ortho:
     m_Target: 1
     speed: 2
