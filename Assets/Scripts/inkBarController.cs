@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class inkBarController : MonoBehaviour
 {
     private Image inkBar;
-    public static float maxInk = 500f;
+    public static float maxInk = 300f;
     public static float currentInk = maxInk; // esta se modifica desde cursorcontroller
 
     // Start is called before the first frame update
